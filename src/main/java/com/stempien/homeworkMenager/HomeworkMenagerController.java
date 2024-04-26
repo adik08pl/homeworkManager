@@ -8,8 +8,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class HomeworkMenagerController {
     @GetMapping("/login")
-    public String showLoginForm(Model model, @RequestParam(required = false) String error) {
-        model.addAttribute("error", error);
+    public String showLoginForm(Model model, @RequestParam(required = false) String error,@RequestParam(required = false) String logout) {
+        if (logout != null)
+            model.addAttribute("error", error);
         return "login";
     }
     @GetMapping("/")
