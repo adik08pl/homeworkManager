@@ -1,13 +1,13 @@
-package com.stempien.homeworkMenager;
+package com.stempien.homeworkManager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HomeworkMenagerApplication {
+public class HomeworkManagerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HomeworkMenagerApplication.class, args);
+		SpringApplication.run(HomeworkManagerApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package com.stempien.homeworkMenager;
+package com.stempien.homeworkManager.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.stempien.homeworkMenager;
+package com.stempien.homeworkManager;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Homework</title>
+    <style>
+body {
+            background-color: #333;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        form {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 95%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #eee;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #ff6f61;
+            color: #eee;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #d63f3a;
+        }
+    </style>
+</head>
+<body>
+<form action="/add" method="post">
+    <input type="hidden" th:field="${homework.id}"/>
+    <input type="text" th:field="${homework.title}" id="title" placeholder="Tytuł">
+    <input type="text" th:field="${homework.content}" id="content" placeholder="Treść">
+    <input type="number" th:field="${homework.weight}" id="weight" placeholder="Waga">
+    <input type="date" th:field="${homework.deadline}" id="deadline" placeholder="Termin">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+    <button type="submit">Dodaj</button>
+</form>
+</body>
+</html>

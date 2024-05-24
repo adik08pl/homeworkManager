@@ -1,8 +1,6 @@
-package com.stempien.homeworkMenager;
+package com.stempien.homeworkManager.security.users.student;
 
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 class StudentService {
